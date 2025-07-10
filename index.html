@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Resume Builder</h1>
+
+    <form id="resume-form">
+    <h2>Personal Information</h2>
+    <input type="text" id="fullName" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="tel" id="phone" placeholder="Phone Number" required />
+    <input type="text" id="address" placeholder="Address" required />
+
+    <h2>Education</h2>
+    <input type="text" id="degree" placeholder="Degree (e.g. B.Tech)" required />
+    <input type="text" id="university" placeholder="University/College" required />
+    <input type="text" id="gradYear" placeholder="Year of Graduation" required />
+
+    <h2>Experience</h2>
+    <input type="text" id="jobTitle" placeholder="Job Title" required />
+    <input type="text" id="company" placeholder="Company" required />
+    <input type="text" id="duration" placeholder="Duration (e.g. June 2025 - Present)" required />
+    <textarea id="jobDescription" placeholder="Job Description" rows="4" required></textarea>
+
+    <h2>Skills</h2>
+    <input type="text" id="skills" placeholder="e.g. HTML, CSS, JavaScript" required />
+
+    <br><br>
+    <button type="button" onclick="generateResume()">Preview Resume</button>
+  </form>
+
+  <hr />
+
+  <div id="resume-preview" style="display: none;">
+    <h2>Resume Preview</h2>
+    <div id="preview-content"></div>
+    <button onclick="downloadPDF()">Download PDF</button>
+  </div>
+
+  <script src="libs/jspdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
